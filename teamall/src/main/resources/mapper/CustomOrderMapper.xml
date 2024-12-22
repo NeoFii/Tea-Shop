@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mall.mapper.CustomOrderMapper">
+    <select id="getOrderByUser" resultType="com.example.mall.mbg.model.Orders">
+    SELECT * from orders where userid=#{userid};
+    </select>
+    <select id="getOrderItemByOrderid" resultType="com.example.mall.mbg.model.Orderitem">
+    SELECT * from orderitem where orderid=#{orderid};
+    </select>
+    <insert id="insertOrderitem" parameterType="com.example.mall.mbg.model.Orderitem">
+    insert into orderitem (id,
+                           orderid,
+                           userid,
+                           proid,
+                           currentunitprice,
+                           quantity,
+                           totalprice,
+                           status,
+                           createtime,
+                           updatetime)
+                           values
+    (#{id},
+     #{orderid},
+     #{userid},
+     #{proid},
+     #{currentunitprice},
+     #{quantity},
+     #{totalprice},
+     #{status},
+     #{createtime},
+     #{updatetime});
+    </insert>
+    <insert id="insertOrder" parameterType="com.example.mall.mbg.model.Orders">
+    insert into orders (orderid,
+                           userid,
+                           payment,
+                           paymenttype,
+                           postage,
+                           status,
+                           paymenttime,
+                           sendtime,
+                           endtime,
+                           closetime,
+                           createtime,
+                           updatetime)
+    values
+    (#{orderid},
+     #{userid},
+     #{payment},
+     #{paymenttype},
+     #{postage},
+     #{status},
+     #{paymenttime},
+     #{sendtime},
+     #{endtime},
+     #{closetime},
+     #{createtime},
+     #{updatetime})
+    </insert>
+
+    <update id="updateOrderitemRevStatus" parameterType="com.example.mall.mbg.model.Orderitem">
+        update orderitem
+        SET revid = #{revid},
+            status = #{status},
+            updatetime = #{updatetime}
+        where id = #{id}
+    </update>
+
+    <update id="updateOrderStatus" parameterType="com.example.mall.mbg.model.Orders">
+        update orders
+        SET status = #{status}
+            ,updatetime = #{updatetime}
+        <if test="paymenttime != null">
+            ,paymenttime = #{paymenttime}
+        </if>
+        <if test="sendtime != null">
+            ,sendtime = #{sendtime}
+        </if>
+        <if test="endtime != null">
+            ,endtime = #{endtime}
+        </if>
+        <if test="closetime != null">
+            ,closetime = #{closetime}
+        </if>
+        where orderid = #{orderid}
+    </update>
+</mapper>

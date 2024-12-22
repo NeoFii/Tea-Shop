@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mall.mapper.CustomProductMapper">
+  <select id="searchProducts" resultType="com.example.mall.mbg.model.Product">
+    select
+        *
+    from product
+    where (name like concat('%',#{keyword},'%') or subtitle like concat('%',#{keyword},'%'))
+    and stock > 0 and status = 1
+    order by proid
+    limit ${(pageNum - 1) * pageSize}, #{pageSize}
+  </select>
+
+  <select id="getCount" parameterType="String" resultType="int">
+    select
+      count(*)
+    from product
+    where stock > 0 and status = 1
+    <if test="value != null">
+      and (name like concat('%',#{keyword},'%') or subtitle like concat('%',#{keyword},'%'))
+    </if>
+  </select>
+
+
+</mapper>

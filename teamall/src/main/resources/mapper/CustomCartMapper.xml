@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mall.mapper.CustomCartMapper">
+  <select id="getCartByUser" resultType="com.example.mall.mbg.model.Cart">
+    SELECT * from cart where userid=#{userid};
+  </select>
+  <update id="updateCartCount" parameterType="com.example.mall.mbg.model.Cart">
+    update cart
+    SET quantity = #{quantity},
+        checked = #{checked},
+        updatetime = #{updatetime}
+    where carid = #{carid}
+  </update>
+  <delete id="deleteUserCart" parameterType="String">
+      delete from cart where userid=#{userid};
+  </delete>
+
+</mapper>

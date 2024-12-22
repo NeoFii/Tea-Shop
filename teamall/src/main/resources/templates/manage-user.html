@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Evara - 网上茶叶商城</title>
+    <!--    <script src="../../../../console-ban.min.js"></script>-->
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" property="og:title">
+    <meta content="" property="og:type">
+    <meta content="" property="og:url">
+    <meta content="" property="og:image">
+    <link href="../../imgs/theme/favicon.svg" rel="shortcut icon" type="image/x-icon">
+    <link href="../../css/main.css?v=3.4" rel="stylesheet">
+</head>
+<body>
+<header class="header-area header-style-4 header-height-2">
+    <div class="header-bottom header-bottom-bg-color sticky-bar">
+        <div class="container">
+            <div class="header-wrap header-space-between position-relative">
+                <div class="logo logo-width-1 d-block d-lg-none">
+                    <a href="/url/index"><img alt="logo" src="../../imgs/theme/logo.svg"></a>
+                </div>
+                <div class="header-nav d-none d-lg-flex">
+                    <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
+                        <nav>
+                            <ul>
+                                <li><a class="active" href="/url/promanage">管理员主页 <i class="fi-rs-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/url/promanage">商品管理</a></li>
+                                        <li><a href="/url/usermanage">用户管理</a></li>
+                                        <li><a href="/url/ordermanage">订单管理</a></li>
+                                        <li><a href="/url/login">退出登录</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="page-header breadcrumb-wrap">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/url/promanage" rel="nofollow">管理员主页</a>
+                <span></span> 用户管理
+            </div>
+        </div>
+    </div>
+    <section class="mt-50 mb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <button class="btn btn-sm mb-10" onclick="createUser()"><i class="fi-rs-plus mr-5"></i>新增</button>
+                </div>
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table shopping-summery text-center clean">
+                            <thead>
+                            <tr class="main-heading">
+                                <th scope="col">账号</th>
+                                <th scope="col">昵称</th>
+                                <th scope="col">密码</th>
+                                <th scope="col">手机</th>
+                                <th scope="col">地址</th>
+                                <th scope="col">角色</th>
+                                <th scope="col">更新时间</th>
+                                <th scope="col">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="item:${userList}">
+                                <td class="product-des product-name">
+                                    <h5 class="product-name" th:text="${item.username}"></h5>
+                                </td>
+                                <td class="price" data-title="Price"><span th:text="${item.realname}">￥65.00 </span>
+                                </td>
+                                <td class="price" data-title="Price"><span th:text="${item.password}">￥65.00 </span>
+                                </td>
+                                <td class="price" data-title="Price"><span th:text="${item.phone}">￥45.00 </span></td>
+                                <td class="price" data-title="Price"><span th:text="${item.address}">1 </span></td>
+                                <td class="price" data-title="Price"><span th:text="${item.fmtRole}">￥65.00 </span></td>
+                                <td class="price" data-title="Price"><span
+                                        th:text="${item.fmtUpdatetime}">￥65.00 </span></td>
+                                <td class="text-right" data-title="Cart">
+                                    <button class="btn btn-sm" th:onclick="editUser([[${item.userid}]])"><i
+                                            class="fi-rs-edit mr-5"></i>修改
+                                    </button>
+                                    <button class="btn btn-sm" th:onclick="deleteUser([[${item.userid}]])"><i
+                                            class="fi-rs-cross-circle mr-5"></i>删除
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="text-center">
+                <h5 class="mb-5">Now Loading</h5>
+                <div class="loader">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="../../js/vendor/jquery-3.6.0.min.js"></script>
+<script src="../../js/vendor/jquery-migrate-3.3.0.min.js"></script>
+<script src="../../js/vendor/bootstrap.bundle.min.js"></script>
+<script src="../../js/plugins/slick.js"></script>
+<script src="../../js/plugins/jquery.syotimer.min.js"></script>
+<script src="../../js/plugins/wow.js"></script>
+<script src="../../js/plugins/jquery-ui.js"></script>
+<script src="../../js/plugins/perfect-scrollbar.js"></script>
+<script src="../../js/plugins/magnific-popup.js"></script>
+<script src="../../js/plugins/select2.min.js"></script>
+<script src="../../js/plugins/waypoints.js"></script>
+<script src="../../js/plugins/counterup.js"></script>
+<script src="../../js/plugins/jquery.countdown.min.js"></script>
+<script src="../../js/plugins/images-loaded.js"></script>
+<script src="../../js/plugins/isotope.js"></script>
+<script src="../../js/plugins/scrollup.js"></script>
+<script src="../../js/plugins/jquery.vticker-min.js"></script>
+<script src="../../js/main.js?v=3.4"></script>
+<script src="../../js/shop.js?v=3.4"></script>
+<script src="../../js/custom.js"></script>
+</body>
+</html>

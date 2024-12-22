@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Evara - 网上茶叶商城</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../imgs/theme/favicon.svg">
+    <link rel="stylesheet" href="../../css/main.css?v=3.4">
+</head>
+<body>
+<header class="header-area header-style-4 header-height-2">
+    <div class="header-top header-top-ptb-1 d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="header-info">
+                        <ul>
+                            <li><i class="fi-rs-smartphone"></i> <a href="#">客服QQ：732779870@qq.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-4">
+                    <div class="text-center">
+                        <div id="news-flash" class="d-inline-block">
+                            <ul>
+                                <li>最高可得50%的折扣 <a href="/url/prolist">查看详情</a></li>
+                                <li>参与活动-节省更多的优惠券</li>
+                                <li>龙井碧螺春，今天节省35%的折扣 <a href="/url/prolist">立即购买</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4">
+                    <div class="header-info header-info-right">
+                        <ul>
+                            <li><i class="fi-rs-user"></i><a href="/url/login">登录 / 注册</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
+        <div class="container">
+            <div class="header-wrap">
+                <div class="logo logo-width-1">
+                    <a href="/url/index"><img src="../../imgs/theme/logo.svg" alt="logo"></a>
+                </div>
+                <div class="header-right">
+                    <div class="search-style-2">
+                        <form action="" onsubmit="return false;">
+                            <select class="select-active">
+                                <option>所有分类</option>
+                                <option>绿茶</option>
+                                <option>红茶</option>
+                                <option>乌龙茶</option>
+                                <option>白茶</option>
+                                <option>黄茶</option>
+                                <option>黑茶</option>
+                                <option>花茶</option>
+                            </select>
+                            <input id="keyword" type="text" placeholder="搜索商品..." onchange="searchProduct(1,true)">
+                        </form>
+                    </div>
+                    <div class="header-action-right">
+                        <div class="header-action-2">
+                            <div class="header-action-icon-2">
+                                <a class="mini-cart-icon" href="/url/cart">
+                                    <img alt="Evara" src="../../imgs/theme/icons/icon-cart.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom header-bottom-bg-color sticky-bar">
+        <div class="container">
+            <div class="header-wrap header-space-between position-relative">
+                <div class="logo logo-width-1 d-block d-lg-none">
+                    <a href="/url/index"><img src="../../imgs/theme/logo.svg" alt="logo"></a>
+                </div>
+                <div class="header-nav d-none d-lg-flex">
+                    <div class="main-menu main-menu-padding-1 main-menu-lh-2 d-none d-lg-block">
+                        <nav>
+                            <ul>
+                                <li><a class="active" href="/url/index">主页 <i class="fi-rs-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/url/index">主页</a></li>
+                                    </ul>
+                                </li>
+                                <li class="position-static"><a href="#">购物 <i class="fi-rs-angle-down"></i></a>
+                                    <ul class="mega-menu">
+                                        <li class="sub-mega-menu sub-mega-menu-width-22">
+                                            <a class="menu-title" href="#">绿茶</a>
+                                            <ul>
+                                                <li><a href="/url/prolist">龙井</a></li>
+                                                <li><a href="/url/prolist">碧螺春</a></li>
+                                                <li><a href="/url/prolist">黄山毛峰</a></li>
+                                                <li><a href="/url/prolist">普洱茶</a></li>
+                                                <li><a href="/url/prolist">六堡茶</a></li>
+                                                <li><a href="/url/prolist">安化黑茶</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-mega-menu sub-mega-menu-width-22">
+                                            <a class="menu-title" href="#">红茶</a>
+                                            <ul>
+                                                <li><a href="/url/prolist">祁门红茶</a></li>
+                                                <li><a href="/url/prolist">正山小种</a></li>
+                                                <li><a href="/url/prolist">金骏眉</a></li>
+                                                <li><a href="/url/prolist">滇红</a></li>
+                                                <li><a href="/url/prolist">蒙顶黄芽</a></li>
+                                                <li><a href="/url/prolist">君山银针</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-mega-menu sub-mega-menu-width-22">
+                                            <a class="menu-title" href="#">乌龙茶</a>
+                                            <ul>
+                                                <li><a href="/url/prolist">武夷岩茶</a></li>
+                                                <li><a href="/url/prolist">铁观音</a></li>
+                                                <li><a href="/url/prolist">四川藏茶</a></li>
+                                                <li><a href="/url/prolist">大红袍</a></li>
+                                                <li><a href="/url/prolist">凤凰单丛</a></li>
+                                                <li><a href="/url/prolist">白毫银针</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-mega-menu sub-mega-menu-width-34">
+                                            <div class="menu-banner-wrap">
+                                                <a href="/url/prolist"><img
+                                                        src="../../imgs/banner/menu-banner.jpg" alt="Evara"></a>
+                                                <div class="menu-banner-content">
+                                                    <h4>热卖中</h4>
+                                                    <h3>不要错过<br> 最近趋势</h3>
+                                                    <div class="menu-banner-price">
+                                                        <span class="new-price text-success">节省 50%</span>
+                                                    </div>
+                                                    <div class="menu-banner-btn">
+                                                        <a href="/url/prolist">立即购买</a>
+                                                    </div>
+                                                </div>
+                                                <div class="menu-banner-discount">
+                                                    <h3>
+                                                        <span>35%</span>
+                                                        折扣
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">我的 <i class="fi-rs-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/url/info">我的信息</a></li>
+                                        <li><a href="/url/login">退出登录</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/url/culture">茶文化</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="hotline d-none d-lg-block">
+                    <p><i class="fi-rs-headset"></i><span>联系热线</span> QQ：732779870 </p>
+                </div>
+                <p class="mobile-promotion">Happy <span class="text-brand">Mother's Day</span>. Big Sale Up to 40%</p>
+                <div class="header-action-right d-block d-lg-none">
+                    <div class="header-action-2">
+                        <div class="header-action-icon-2">
+                            <a href="shop-wishlist.html">
+                                <img alt="Evara" src="../../imgs/theme/icons/icon-heart.svg">
+                                <span class="pro-count white">4</span>
+                            </a>
+                        </div>
+                        <div class="header-action-icon-2">
+                            <a class="mini-cart-icon" href="shop-cart.html">
+                                <img alt="Evara" src="../../imgs/theme/icons/icon-cart.svg">
+                                <span class="pro-count white">2</span>
+                            </a>
+                            <div class="cart-dropdown-wrap cart-dropdown-hm2">
+                                <ul>
+                                    <li>
+                                        <div class="shopping-cart-img">
+                                            <a href="shop-product-full.html"><img alt="Evara"
+                                                                                   src="../../imgs/shop/thumbnail-3.jpg"></a>
+                                        </div>
+                                        <div class="shopping-cart-title">
+                                            <h4><a href="shop-product-full.html">Plain Striola Shirts</a></h4>
+                                            <h3><span>1 × </span>￥800.00</h3>
+                                        </div>
+                                        <div class="shopping-cart-delete">
+                                            <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="shopping-cart-img">
+                                            <a href="shop-product-full.html"><img alt="Evara"
+                                                                                   src="../../imgs/shop/thumbnail-4.jpg"></a>
+                                        </div>
+                                        <div class="shopping-cart-title">
+                                            <h4><a href="shop-product-full.html">Macbook Pro 2022</a></h4>
+                                            <h3><span>1 × </span>￥3500.00</h3>
+                                        </div>
+                                        <div class="shopping-cart-delete">
+                                            <a href="#"><i class="fi-rs-cross-small"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="shopping-cart-footer">
+                                    <div class="shopping-cart-total">
+                                        <h4>Total <span>￥383.00</span></h4>
+                                    </div>
+                                    <div class="shopping-cart-button">
+                                        <a href="shop-cart.html">View cart</a>
+                                        <a href="shop-checkout.html">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-action-icon-2 d-block d-lg-none">
+                            <div class="burger-icon burger-icon-white">
+                                <span class="burger-icon-top"></span>
+                                <span class="burger-icon-mid"></span>
+                                <span class="burger-icon-bottom"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <section class="mt-50 mb-50">
+        <div class="container" id="container">
+            <div class="row" th:fragment="products">
+                <div class="col-lg-12">
+                    <h4>茶文化历史悠久且丰富，它涵盖了茶的起源、传播、习俗以及艺术等多个方面。以下是关于茶文化历史的一些重要阶段和事件：</h4>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_6.jpg"></div>
+                    <h4>茶的起源：</h4>
+                    <p>茶的起源可以追溯到古代中国，大约在公元前2000年左右。最初，茶是被作为药材使用的，后来逐渐发展成为一种日常饮品。在古代，茶主要产自四川、云南、贵州等地的原始森林中，被称为“野生茶”。随着时间的推移，人们开始将茶树移植到房屋周围，进行人工种植，这标志着茶从野生植物转变为一种农作物。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_7.jpg"></div>
+                    <h4>茶文化的形成：</h4>
+                    <p>茶文化的形成可以追溯到汉代。当时，茶开始在贵族和文人之间流传，成为一种高雅的享受。人们开始研究茶的种植、采摘、制作和冲泡方法，并形成了一些初步的规矩和礼仪。到了唐代，茶道正式成为一种文化现象，并形成了三大茶道流派：禅宗茶道、儒家茶道和道家茶道。这三大茶道的形成标志着茶文化从物质层面上升到了精神层面。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_8.jpg"></div>
+                    <h4>茶文化的传播与发展：</h4>
+                    <p>在宋代，泡茶技艺得到了改进，水质的选择也变得更为讲究，斗茶成为了一种风潮。元代时，开始出现散茶，民间以散茶为主，饼茶则主要为皇室宫廷所用。明代时期，泡茶方式开始流行，即用沸水直接冲泡茶叶。到了清代，中国茶已经风靡世界，出口茶叶的只有中国，制作工艺也日趋丰富，包括烘青、炒青等，制作出了乌龙茶、红茶、黑茶、花茶、绿茶、白茶等多种茶类。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_9.jpg"></div>
+                    <h4>茶文化的社会意义：</h4>
+                    <p>茶文化不仅具有深厚的历史底蕴，还在现代社会中发挥着重要作用。在激烈的社会竞争和复杂的人际关系中，参与茶文化可以使人们的精神和身心得到放松。此外，茶文化还有利于社区文明建设，改变社会不正当消费活动，创建精神文明，促进社会进步。同时，茶文化还丰富了人们的文化生活，提高了生活质量。国际茶文化的交流也促进了开放和国际文化的交流，使茶文化成为人类文明的共同精神财富。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_10.jpg"></div>
+                    <p>茶文化，这一深邃而博大的文化体系，宛如一幅绚烂的画卷，在中国数千年的历史长河中缓缓展开。它是中华民族智慧的结晶，是生活与艺术、自然与人性的完美结合。每一片茶叶，都承载着大自然的馈赠和茶农的辛勤；每一杯茶，都蕴含着深厚的历史底蕴和独特的人文情怀。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_11.jpg"></div>
+                    <h4>茶叶的种类：</h4>
+                    <p>绿茶，如春天的使者，带着清新的气息扑面而来。它的色泽绿润，香气高鲜，汤色明亮，滋味纯和而爽口。品饮绿茶，仿佛置身于青山绿水之间，感受大自然的清新与宁静。</p>
+                    <p>红茶，则如秋天的收获，醇厚而甘甜。它的色泽乌润，滋味醇和，汤色红亮鲜明。红茶的香气独特，带有麦芽糖或焦糖的香味，让人回味无穷。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_2.jpg"></div>
+                    <p>乌龙茶，介于绿茶与红茶之间，既有绿茶的鲜爽，又有红茶的甘甜。它的香气馥郁持久，口感醇厚回甘。品饮乌龙茶，仿佛是在品味人生的酸甜苦辣，感悟生活的真谛。</p>
+                    <p>白茶，以其独特的制作工艺和口感而备受推崇。它的茶芽完整，形态自然，白毫显露，香气清鲜，滋味甘醇。白茶的汤色清澈透亮，入口后回甘无穷，让人陶醉其中。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_3.jpg"></div>
+                    <p>黄茶，色泽金黄，香气清高，滋味醇厚爽口。它的制作工艺独特，需要经过闷黄的过程，使得茶叶在氧化作用下形成独特的黄色。黄茶不仅口感独特，还具有很高的营养价值。</p>
+                    <p>黑茶，色泽黑褐或黄褐，汤色橙黄或琥珀色。它的制作工艺复杂，需要经过长时间的发酵和陈化。黑茶的口感醇厚回甘，具有独特的陈香味道。品饮黑茶，仿佛是在品味岁月的沉淀和历史的厚重。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_4.jpg"></div>
+                    <p>除了这些各具特色的茶类之外，中国的茶文化还包括茶道、茶德、茶精神、茶联、茶书、茶具、茶谱、茶诗、茶画、茶学、茶故事等丰富的内容。茶道强调的是一种和谐、雅致的精神境界，茶德则是对茶人品性的一种要求。茶精神则体现了茶文化的精髓和灵魂，它倡导的是一种淡泊名利、宁静致远的生活态度。</p>
+                    <p>在中国，茶不仅是一种饮品，更是一种文化、一种艺术、一种生活方式。无论是亲朋好友聚会时的品茗交流，还是独自一人的静心品茶，都能让人感受到茶文化的独特魅力。它让人们在繁忙的生活中找到一丝宁静与安逸，让人们在品味茶香的同时，也能品味人生的美好与真谛。</p>
+                    <div style="margin: 15px 0; width: 600px;"><img src="../../imgs/cul_5.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="main">
+    <section class="newsletter p-30 text-white wow fadeIn animated">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-md-3 mb-lg-0">
+                    <div class="row align-items-center">
+                        <div class="col flex-horizontal-center">
+                            <img class="icon-email" src="../../imgs/theme/icons/icon-email.svg" alt="">
+                            <h4 class="font-size-20 mb-0 ml-3">订阅最新信息</h4>
+                        </div>
+                        <div class="col my-4 my-md-0 des">
+                            <h5 class="font-size-15 ml-4 mb-0">立即获取<strong> 25元优惠券
+                            </strong>首单购物。</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <form class="form-subcriber d-flex wow fadeIn animated">
+                        <input type="email" class="form-control bg-white font-small" placeholder="输入邮箱">
+                        <button class="btn bg-dark text-white text-nowrap" type="submit">订阅</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding footer-mid">
+        <div class="container pt-15 pb-20">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="widget-about font-md mb-md-5 mb-lg-0">
+                        <div class="logo logo-width-1 wow fadeIn animated">
+                            <a href="/url/index"><img src="../../imgs/theme/logo.svg" alt="logo"></a>
+                        </div>
+                        <h5 class="mt-20 mb-10 fw-600 text-grey-4 wow fadeIn animated">联系方式</h5>
+                        <p class="wow fadeIn animated">
+                            <strong>地址: </strong>浙江省杭州市余杭区五常街道文一西路969号3幢5层554室
+                        </p>
+                        <p class="wow fadeIn animated">
+                            <strong>电话: </strong>0571-85022088
+                        </p>
+                        <p class="wow fadeIn animated">
+                            <strong>工作时间: </strong>10:00 - 18:00, 周一 - 周日
+                        </p>
+                        <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">关注我们</h5>
+                        <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
+                            <a href="#"><img src="../../imgs/theme/icons/icon-facebook.svg" alt=""></a>
+                            <a href="#"><img src="../../imgs/theme/icons/icon-twitter.svg" alt=""></a>
+                            <a href="#"><img src="../../imgs/theme/icons/icon-instagram.svg" alt=""></a>
+                            <a href="#"><img src="../../imgs/theme/icons/icon-pinterest.svg" alt=""></a>
+                            <a href="#"><img src="../../imgs/theme/icons/icon-youtube.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h5 class="widget-title wow fadeIn animated">绿茶</h5>
+                    <ul class="footer-list wow fadeIn animated mb-sm-5 mb-md-0">
+                        <li><a href="/url/prolist">龙井</a></li>
+                        <li><a href="/url/prolist">碧螺春</a></li>
+                        <li><a href="/url/prolist">黄山毛峰</a></li>
+                        <li><a href="/url/prolist">普洱茶</a></li>
+                        <li><a href="/url/prolist">六堡茶</a></li>
+                        <li><a href="/url/prolist">安化黑茶</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-3">
+                    <h5 class="widget-title wow fadeIn animated">红茶</h5>
+                    <ul class="footer-list wow fadeIn animated">
+                        <li><a href="/url/prolist">祁门红茶</a></li>
+                        <li><a href="/url/prolist">正山小种</a></li>
+                        <li><a href="/url/prolist">金骏眉</a></li>
+                        <li><a href="/url/prolist">滇红</a></li>
+                        <li><a href="/url/prolist">蒙顶黄芽</a></li>
+                        <li><a href="/url/prolist">君山银针</a></li>
+                    </ul>
+                </div>
+<!--                <div class="col-lg-4">-->
+<!--                    <h5 class="widget-title wow fadeIn animated">下载 APP</h5>-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-8 col-lg-12">-->
+<!--                            <p class="wow fadeIn animated">通过 App Store 或 Google Play </p>-->
+<!--                            <div class="download-app wow fadeIn animated">-->
+<!--                                <a href="#" class="hover-up mb-sm-4 mb-lg-0"><img class="active"-->
+<!--                                                                                  src="../../imgs/theme/app-store.jpg"-->
+<!--                                                                                  alt=""></a>-->
+<!--                                <a href="#" class="hover-up"><img src="../../imgs/theme/google-play.jpg" alt=""></a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-4 col-lg-12 mt-md-3 mt-lg-0">-->
+<!--                            <p class="mb-20 wow fadeIn animated">安全支付网关</p>-->
+<!--                            <img class="wow fadeIn animated" src="../../imgs/theme/payment-method.png" alt="">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </section>
+    <div class="container pb-20 wow fadeIn animated">
+        <div class="row">
+            <div class="col-12 mb-20">
+                <div class="footer-bottom"></div>
+            </div>
+            <div class="col-lg-6">
+                <p class="float-md-left font-sm text-muted mb-0">&copy; 2024, <strong class="text-brand">Evara</strong>
+                    - 网上茶叶商城 </p>
+            </div>
+            <div class="col-lg-6">
+                <p class="text-lg-end text-start font-sm text-muted mb-0">
+                    Designed by <a href="#" target="_blank">Alithemes.com</a>. All rights
+                    reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="text-center">
+                <h5 class="mb-5">Now Loading</h5>
+                <div class="loader">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="../../js/vendor/jquery-3.6.0.min.js"></script>
+<script src="../../js/vendor/jquery-migrate-3.3.0.min.js"></script>
+<script src="../../js/vendor/bootstrap.bundle.min.js"></script>
+<script src="../../js/plugins/slick.js"></script>
+<script src="../../js/plugins/jquery.syotimer.min.js"></script>
+<script src="../../js/plugins/wow.js"></script>
+<script src="../../js/plugins/jquery-ui.js"></script>
+<script src="../../js/plugins/perfect-scrollbar.js"></script>
+<script src="../../js/plugins/magnific-popup.js"></script>
+<script src="../../js/plugins/select2.min.js"></script>
+<script src="../../js/plugins/waypoints.js"></script>
+<script src="../../js/plugins/counterup.js"></script>
+<script src="../../js/plugins/jquery.countdown.min.js"></script>
+<script src="../../js/plugins/images-loaded.js"></script>
+<script src="../../js/plugins/isotope.js"></script>
+<script src="../../js/plugins/scrollup.js"></script>
+<script src="../../js/plugins/jquery.vticker-min.js"></script>
+<script src="../../js/plugins/jquery.theia.sticky.js"></script>
+<script src="../../js/plugins/jquery.elevatezoom.js"></script>
+<script src="../../js/main.js?v=3.4"></script>
+<script src="../../js/shop.js?v=3.4"></script>
+<script src="../../js/custom.js"></script>
+</body>
+</html>
